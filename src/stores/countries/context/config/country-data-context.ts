@@ -1,7 +1,4 @@
-// * Import Tools
 import { createContext } from 'react';
-
-// * Import Types
 import { ICountryDTO } from '../../../../dtos/country.dto';
 
 export const DataContext = createContext<ICountryDTO>({

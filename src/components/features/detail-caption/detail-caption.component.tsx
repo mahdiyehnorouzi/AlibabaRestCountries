@@ -1,8 +1,7 @@
 import { FC } from 'react';
-import { Box, Card } from '@mui/material';
-import { useCountries } from '../../hooks/countries';
 import { DetailCaptionStyle as S } from './detail-caption.style';
 import { useNavigate } from 'react-router-dom';
+import { useCountries } from '../../../hooks/countries';
 
 export const DetailCaptionComponent: FC = () => {
   const { chosenCountry } = useCountries();
@@ -66,7 +65,7 @@ export const DetailCaptionComponent: FC = () => {
         <S.TitleDescription>Border Countries:</S.TitleDescription>
 
         <S.TitleContainer>
-          {chosenCountry?.continents.map(country => (
+          {chosenCountry?.continents.map((country: any) => (
             <S.CountriesCard onClick={() => navigate(`/detail-page/${country}`)}>{country}</S.CountriesCard>
           ))}
         </S.TitleContainer>

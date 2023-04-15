@@ -1,12 +1,12 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { HomeCardComponent } from '../../features/home-card/home-card.component';
 import { useNavigate } from 'react-router-dom';
 import { HomeStyle as S } from './home.style';
-import { useCountries, useFetchFindAllCountries } from '../../hooks/countries';
-import { CountryDataContextProviderComponent } from '../../stores/countries/context/provider/country-data-context-provider.component';
 import _ from 'lodash';
-import { Grid, Paper } from '@mui/material';
+import { Grid } from '@mui/material';
 import { FilterComponent } from '../../features/filter/filter.component';
+import { CountryDataContextProviderComponent } from '../../../stores/countries/context/provider/country-data-context-provider.component';
+import { useCountries, useFetchFindAllCountries } from '../../../hooks/countries';
 
 
 export const HomePage: FC = () => {
@@ -30,7 +30,7 @@ export const HomePage: FC = () => {
                 <S.CardContainer container flexWrap={'wrap'}>
                     <Grid item xs={12}>
                         <Grid container justifyContent="center" spacing={5}>
-                            {countryItems.filter(country => country.name.official.toLowerCase().includes(query)).filter(country => region ? country.region === region : true).map((country) => (
+                            {countryItems.filter((country: any) => country.name.official.toLowerCase().includes(query)).filter(country => region ? country.region === region : true).map((country) => (
                                 <S.HomeCardGrid rowSpacing={4} item columnSpacing={{ xs: 5, sm: 2, md: 3 }} onClick={() => navigate(`/detail-page/${country.name.official}`)}>
                                     <CountryDataContextProviderComponent data={country} key={+country.idd} >
                                         <HomeCardComponent/>

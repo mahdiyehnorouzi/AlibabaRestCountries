@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { useCountryData } from '../../../hooks/countries';
+import { useCountryData } from '../../../../hooks/countries';
 import { CardDetailCaptionStyle as S } from './card-detail-caption.style';
 
 export const CardDetailComponent: FC = () => {

@@ -1,7 +1,7 @@
 // * Import Types
 import { PayloadAction } from '@reduxjs/toolkit';
-import { ICountriesRedux, Region } from "./countries.type";
 import { ICountryDTO } from '../../../dtos/country.dto';
+import { ICountriesRedux, Region } from "./countries.type";
 
 
 const updateItems = (state: ICountriesRedux,

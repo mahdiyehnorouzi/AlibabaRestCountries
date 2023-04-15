@@ -1,8 +1,10 @@
 import { FC } from 'react';
-import { useCountries } from '../../hooks/countries';
-import { Region } from '../../stores/countries/redux/countries.type';
 import {FilterStyle as S} from './filter.style';
 import { useTheme } from '@mui/material';
+import { Region } from '../../../stores/countries/redux/countries.type';
+import { useCountries } from '../../../hooks/countries';
+
+
 export const FilterComponent: FC = () => {
   const {region , updateRegion} = useCountries();
   const theme = useTheme();

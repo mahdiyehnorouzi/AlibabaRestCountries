@@ -1,8 +1,5 @@
-// * Import Types
 import { ICountryDTO } from '../dtos/country.dto';
 import { ICountries } from '../interfaces/countries';
-
-// * Import Tools
 import { server } from '../lib/axios/axios';
 
 export class CountriesService implements ICountries {
