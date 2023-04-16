@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { DetailCaptionStyle as S } from './detail-caption.style';
 import { useNavigate } from 'react-router-dom';
-import { useCountries } from '../../../hooks/countries';
+import { useCountries } from '../../hooks/countries';
 
 export const DetailCaptionComponent: FC = () => {
   const { chosenCountry } = useCountries();

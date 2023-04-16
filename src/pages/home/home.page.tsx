@@ -1,12 +1,12 @@
 import { FC } from 'react';
-import { HomeCardComponent } from '../../features/home-card/home-card.component';
 import { useNavigate } from 'react-router-dom';
 import { HomeStyle as S } from './home.style';
 import _ from 'lodash';
 import { Grid } from '@mui/material';
-import { FilterComponent } from '../../features/filter/filter.component';
-import { CountryDataContextProviderComponent } from '../../../stores/countries/context/provider/country-data-context-provider.component';
-import { useCountries, useFetchFindAllCountries } from '../../../hooks/countries';
+import { useCountries, useFetchFindAllCountries } from '../../hooks/countries';
+import { FilterComponent } from '../../components/filter/filter.component';
+import { CountryDataContextProviderComponent } from '../../stores/countries/context/provider/country-data-context-provider.component';
+import { HomeCardComponent } from '../../components/home-card/home-card.component';
 
 
 export const HomePage: FC = () => {

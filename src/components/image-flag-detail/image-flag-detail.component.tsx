@@ -1,5 +1,5 @@
 import {FC} from 'react';
-import { useCountries } from '../../../hooks/countries';
+import { useCountries } from '../../hooks/countries';
 import {ImageFlagDetailStyle as S} from './image-flag-detail.style';
 
 export const ImageFlagDetailComponent: FC = () => {

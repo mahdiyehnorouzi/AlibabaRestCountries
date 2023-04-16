@@ -1,10 +1,10 @@
 import { FC } from 'react';
-import { DetailCaptionComponent } from '../../features/detail-caption/detail-caption.component';
-import { Box, useTheme } from '@mui/material';
-import { ImageFlagDetailComponent } from '../../features/image-flag-detail/image-flag-detail.component';
+import { useTheme } from '@mui/material';
 import { useNavigate, useParams } from 'react-router-dom';
 import {DetailStyle as S} from './detail.style';
-import { useFetchCountryByName } from '../../../hooks/countries/use-fetch-country-by-name';
+import { useFetchCountryByName } from '../../hooks/countries/use-fetch-country-by-name';
+import { ImageFlagDetailComponent } from '../../components/image-flag-detail/image-flag-detail.component';
+import { DetailCaptionComponent } from '../../components/detail-caption/detail-caption.component';
 
 export const DetailPage: FC = () => {
   const { name } = useParams();
